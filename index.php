@@ -1,7 +1,7 @@
 <?php 
 
     session_start();
-    $connexion = mysqli_connect("localhost", "root","","forum");
+    $connexion = mysqli_connect("localhost", "forum","forum123","forum");
     $requetetopic = "SELECT nom,description,etat FROM topic ORDER BY id DESC";
     $query = mysqli_query($connexion,$requetetopic);
     $resultat = mysqli_fetch_all($query);
@@ -144,7 +144,7 @@
                                 
 
                                     
-                                $connexion = mysqli_connect("localhost","root","","forum");
+                                $connexion = mysqli_connect("localhost","forum","forum123","forum");
                                 $allThread = "SELECT nom FROM thread WHERE id_topic = ".$resultatidtopic[$i][0]."";
                                 
                                 $queryThread = mysqli_query($connexion,$allThread) ;
@@ -161,7 +161,7 @@
                                 <?php 
                                 
                                 $idtoto = $resultatidtopic[$i][0];
-                                $connexion = mysqli_connect("localhost","root","","forum");
+                                $connexion = mysqli_connect("localhost","forum","forum123","forum");
                                 $allThread = "SELECT nom FROM thread WHERE id_topic = $idtoto ORDER BY id DESC LIMIT 1";
                                 
                                 $queryThread = mysqli_query($connexion,$allThread) ;
@@ -217,7 +217,7 @@
                                 
 
                                     
-                                $connexion = mysqli_connect("localhost","root","","forum");
+                                $connexion = mysqli_connect("localhost","forum","forum123","forum");
                                 $allThread = "SELECT nom FROM thread WHERE id_topic = ".$resultatidtopic[$i2][0]."";
                                 
                                 $queryThread = mysqli_query($connexion,$allThread) ;
@@ -234,7 +234,7 @@
                                 <?php 
                                 
                                 $idtoto = $resultatidtopic[$i2][0];
-                                $connexion = mysqli_connect("localhost","root","","forum");
+                                $connexion = mysqli_connect("localhost","forum","forum123","forum");
                                 $allThread = "SELECT nom FROM thread WHERE id_topic = $idtoto ORDER BY id DESC LIMIT 1";
                                 
                                 $queryThread = mysqli_query($connexion,$allThread) ;

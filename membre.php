@@ -3,8 +3,8 @@
 	session_start();
 
 	$serverName = "localhost";
-    $userName = "root";
-    $passwordServer = "";
+    $userName = "forum";
+    $passwordServer = "forum123";
     $nameTable = "forum";
 
     $connexion = mysqli_connect("$serverName", "$userName", "$passwordServer", "$nameTable") ;

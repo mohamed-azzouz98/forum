@@ -1,7 +1,7 @@
 <?php 
 
     session_start();
-    $connexion = mysqli_connect("localhost", "root", "", "forum");
+    $connexion = mysqli_connect("localhost", "forum", "forum123", "forum");
     if(isset($_POST['validationthread']))
     {
         $nomthread = $_POST['threadname'];

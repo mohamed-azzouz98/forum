@@ -3,8 +3,8 @@
     session_start();
     $getIdVar = $_GET['id'];
     $serverName = "localhost";
-    $userName = "root";
-    $passwordServer = "";
+    $userName = "forum";
+    $passwordServer = "forum123";
     $nameTable = "forum";
     $connexion = mysqli_connect("$serverName", "$userName", "$passwordServer", "$nameTable") ;
     $requeteInfosProfil = "SELECT * FROM utilisateurs WHERE id = '".$_SESSION['id']."'";
@@ -63,7 +63,7 @@
                     		if (!empty($resultatInfosProfil['avatar'])) 
                     		{ ?>
 
-                    		<img src="avatar/<?php echo $resultatInfosProfil['avatar'] ?>" width="200" ><br><br>
+                    		<img src="avatar/<?php echo $resultatInfosProfil['avatar'] ?>" width="200" height="200" ><br><br>
                     	<?php
                     		}
                     	?>

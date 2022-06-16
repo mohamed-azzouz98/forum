@@ -2,7 +2,7 @@
 
     
     session_start();
-    $connexion = mysqli_connect("localhost", "root","","forum");
+    $connexion = mysqli_connect("localhost", "forum","forum123","forum");
     $requetemessage="SELECT messagesthreads.id,id_thread,id_utilisateur,messages,date,utilisateurs.id,login,avatar,role FROM messagesthreads INNER JOIN utilisateurs ON utilisateurs.id = id_utilisateur WHERE id_thread = '".$_GET['id']."'";
     $querymessage = mysqli_query($connexion,$requetemessage);
     $resultatmessage = mysqli_fetch_all($querymessage);

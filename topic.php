@@ -4,7 +4,7 @@
 
     if (isset($_GET['id'])) 
     {
-        $connexion = mysqli_connect("localhost","root","","forum");
+        $connexion = mysqli_connect("localhost","forum","forum123","forum");
         $requetethread2 = "SELECT * FROM thread WHERE id_topic = ".$_GET['id']."";
         $querythread2 = mysqli_query($connexion, $requetethread2);
         $resultatthread2 = mysqli_fetch_all($querythread2);
@@ -101,7 +101,7 @@
                         <section class="toastpoussage2">
                             <article class="toastpoussage3">
                                 <?php
-                                    $connexion = mysqli_connect("localhost","root","","forum");
+                                    $connexion = mysqli_connect("localhost","forum","forum123","forum");
                                     $allMessages = "SELECT messages FROM messagesthreads WHERE id_thread = ".$resultatthread2[$i][0]."";
                                     
                                     $queryMessages = mysqli_query($connexion,$allMessages) ;
